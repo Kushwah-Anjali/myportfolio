@@ -45,7 +45,7 @@ body {
     rgba(100, 100, 151, 0.397),
     rgba(255, 0, 0, 0.336)
   );
-  }
+}
 
 #main #gola2 {
   z-index: -500;
@@ -348,7 +348,7 @@ marquee {
   }
 }
 @media (max-width: 575px) {
-  #main{
+  #main {
     /* font-family: Arial, Helvetica, sans-serif; */
   }
   #main #gola1 {
@@ -381,8 +381,7 @@ marquee {
   #page1 #nav {
     height: 12%;
   }
-  #nav h1{
- 
+  #nav h1 {
     font-size: 4.4vw;
     font-weight: 1000;
   }
@@ -499,7 +498,7 @@ marquee {
   #page4 #about-content {
     height: 70%;
     width: 80%;
-  
+
     margin-left: 7vw;
     font-size: 3vw;
   }
