@@ -1,0 +1,534 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: black;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: white;
+}
+#main {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+#page1 {
+  height: 100%;
+  width: 100%;
+}
+#main #circle {
+  display: flex;
+
+  justify-content: center;
+}
+
+#main #gola1 {
+  z-index: -500;
+
+  position: fixed;
+  height: 30vw;
+  width: 30vw;
+  border-radius: 50%;
+  /* background-color: aqua; */
+  /* border: 1px solid black; */
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.87),
+    rgba(100, 100, 151, 0.397),
+    rgba(255, 0, 0, 0.336)
+  );
+  }
+
+#main #gola2 {
+  z-index: -500;
+  height: 40vw;
+  width: 40vw;
+  border-radius: 50%;
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.87),
+    rgba(100, 100, 151, 0.397),
+    rgba(255, 0, 0, 0.336)
+  );
+  /* border: 1px solid black; */
+  left: 10vw;
+  top: 4vw;
+  position: fixed;
+}
+#main #gola3 {
+  background: linear-gradient(black, rgba(100, 100, 151, 0.397));
+
+  z-index: -500;
+  /* border: 1px solid black; */
+
+  height: 35vw;
+  width: 35vw;
+  border-radius: 50%;
+  /* background-color: aqua; */
+  top: 2vw;
+  right: 10vw;
+  position: fixed;
+}
+#nav {
+  position: fixed;
+  height: 9%;
+  width: 98.9%;
+  background: linear-gradient(rgb(42, 74, 90), black);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+#nav h1 {
+  text-transform: uppercase;
+  width: 38%;
+
+  font-size: 2vw;
+}
+#nav a {
+  font-weight: 550;
+  font-size: 1.2vw;
+  text-decoration: none;
+  color: white;
+}
+#progress {
+  height: 4px;
+
+  background-color: rgb(204, 189, 189);
+  position: fixed;
+  top: 9%;
+}
+
+#center {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  /* align-items: center; */
+  justify-content: space-between;
+  margin-top: 70px;
+}
+
+#center-part1 {
+  /* background-color: aqua; */
+  height: 100%;
+  width: 50%;
+  padding: 5vw;
+}
+#center-part1 h1 {
+  font-family: Arial, Helvetica;
+  font-size: 5vw;
+  animation: animate 9s infinite 2s ease-in-out;
+}
+#center-part1 h1:hover {
+}
+#center-part1 h2 {
+  padding: 2.4vw 0;
+  font-family: Arial, Helvetica;
+  font-weight: 550;
+  font-size: 1.5vw;
+}
+#center-part1 span {
+  color: royalblue;
+
+  font-weight: 500;
+}
+#center-part1 span:hover {
+  text-decoration: underline;
+}
+#center-part1 h1:hover {
+  color: rgb(black, gray, blue);
+}
+#center-part2 {
+  /* background-color: rebeccapurple; */
+  padding: 5vw;
+  height: 100%;
+  width: 50%;
+  margin-left: 2vw;
+}
+
+#center-part2 .img {
+  /* background-color: red; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#center-part2 img {
+  border-radius: 70%;
+  height: 50%;
+  width: 50%;
+  object-fit: cover;
+}
+marquee {
+  padding: 1vw;
+  position: fixed;
+}
+#page2 {
+  height: 100%;
+  /* height: fit-content; */
+  width: 100%;
+  /* padding: 5vw; */
+}
+#page2 h1 {
+  padding-top: 10vw;
+  padding-left: 10vw;
+  padding-bottom: 4vw;
+  color: rgb(131, 131, 173);
+  animation: anime 3 infinite 2 infinite backwards;
+  font-size: 2.3vw;
+}
+#page2 #content {
+  padding-left: 10vw;
+  display: flex;
+  gap: 0.5vw;
+  flex-direction: column;
+}
+#page2 #content p {
+  font-size: 1vw;
+  font-family: monospace;
+  font-weight: 550;
+}
+#page2 .container {
+  /* height: 21px; */
+  height: 1.6vw;
+  width: 25%;
+  background-color: rgba(65, 44, 65, 0.829);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+#page2 .container #loader1 {
+  color: black;
+  font-weight: 550;
+  font-size: 1vw;
+  height: 100%;
+  text-align: right;
+  width: 80%;
+  background: linear-gradient(rgb(146, 146, 165), rgb(170, 170, 117));
+}
+#page2 .container #loader2 {
+  color: black;
+  font-weight: 550;
+  font-size: 1vw;
+  text-align: right;
+  height: 100%;
+  width: 60%;
+  background: linear-gradient(rgb(146, 146, 165), rgb(170, 170, 117));
+}
+#page2 .container #loader3 {
+  color: black;
+  font-weight: 550;
+  font-size: 1vw;
+  text-align: right;
+  height: 100%;
+  width: 50%;
+  background: linear-gradient(rgb(146, 146, 165), rgb(170, 170, 117));
+}
+#page2 .container #loader4 {
+  color: black;
+  font-weight: 550;
+  font-size: 1vw;
+  text-align: right;
+  height: 100%;
+  width: 15%;
+  background: linear-gradient(rgb(146, 146, 165), rgb(170, 170, 117));
+}
+#page2 .container span {
+  opacity: 0;
+}
+#page2 .container span:hover {
+  opacity: 1;
+}
+#page3 {
+  height: 100%;
+
+  width: 100%;
+}
+#page3 h1 {
+  color: rgb(131, 131, 173);
+  font-size: 2.3vw;
+}
+#page3 #project {
+  padding: 10vw;
+}
+#list {
+  padding-top: 5vw;
+  height: 60%;
+  width: 50%;
+  /* background-color: black; */
+}
+#list ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.7vw;
+  font-size: 1.4vw;
+
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+#list ul li {
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+#page4 {
+  height: 100%;
+
+  width: 100%;
+}
+#page4 h1 {
+  padding-top: 7vw;
+  padding-left: 10vw;
+  padding-bottom: 2vw;
+  /* color: rgb(230, 226, 222); */
+  color: rgb(131, 131, 173);
+  font-size: 2.3vw;
+}
+#page4 #about-content {
+  height: 70%;
+  width: 80%;
+  /* background-color: aqua; */
+  margin-left: 7vw;
+  font-size: 1.2vw;
+  text-align: justify;
+  padding-left: 3vw;
+}
+
+#page4 #about-content h3 {
+  padding: 0.5vw 0;
+  color: rgb(131, 131, 173);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+#page5 {
+  /* height: 100%; */
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+#page5 #contact {
+  height: 20%;
+  width: 100%;
+  border-top: 2px solid rgb(233, 230, 230);
+  text-align: center;
+  padding: 4vw;
+}
+
+#page5 #contact h1 {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 2.2vw;
+  color: rgb(55, 55, 165);
+}
+#page5 #contact h4 {
+  margin-top: 1.8vw;
+  font-size: 1.4vw;
+}
+#page5 #contact p {
+  margin-top: 0.4vw;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1vw;
+}
+#page5 #contact i {
+  font-weight: 100;
+}
+#page5 #contact a {
+  color: blue;
+  text-decoration: none;
+}
+@keyframes animate {
+  from {
+    color: white;
+  }
+  to {
+    color: rgb(39, 38, 38);
+  }
+}
+@media (max-width: 575px) {
+  #main{
+    /* font-family: Arial, Helvetica, sans-serif; */
+  }
+  #main #gola1 {
+    top: 40%;
+  }
+  #main #gola2 {
+    top: 40%;
+  }
+  #main #gola3 {
+    top: 40%;
+  }
+  #nav h1 {
+    text-transform: uppercase;
+    width: 38%;
+    margin-left: -180px;
+    font-size: 4.9vw;
+  }
+  #nav a {
+    display: none;
+    font-weight: 550;
+    font-size: 1.2vw;
+    text-decoration: none;
+    color: white;
+  }
+  #page1 {
+    /* height: fit-content; */
+    height: 95vh;
+    width: 100%;
+  }
+  #page1 #nav {
+    height: 12%;
+  }
+  #nav h1{
+ 
+    font-size: 4.4vw;
+    font-weight: 1000;
+  }
+  #center {
+    display: block;
+    /* background-color: gold; */
+  }
+  #center-part1 {
+    /* background-color: aqua; */
+    height: 100%;
+    width: fit-content;
+    padding: 10vw;
+    text-align: center;
+  }
+  #center-part1 h1 {
+    font-family: Arial, Helvetica;
+    font-size: 10vw;
+    padding: 8vw;
+  }
+
+  #center-part1 h2 {
+    padding: 7vw;
+    font-family: Arial, Helvetica;
+    font-weight: 100;
+    font-size: 4.5vw;
+  }
+  #center-part1 span {
+    color: royalblue;
+
+    font-weight: 100;
+  }
+  #center-part2 {
+    /* background-color: rebeccapurple; */
+    align-items: center;
+    padding: 7vw;
+    height: 100%;
+    width: 100%;
+    /* margin-left: 2vw; */
+  }
+
+  #center-part2 .img {
+    /* background-color: red; */
+    align-self: center;
+    margin-left: -15%;
+  }
+  #center-part2 img {
+    border-radius: 70%;
+    height: 50%;
+    width: 50%;
+    object-fit: cover;
+  }
+
+  #page2 {
+    height: fit-content;
+    /* background-color: white; */
+    width: 100%;
+  }
+  #page2 h1 {
+    font-size: 9vw;
+  }
+  #page2 #content {
+    padding-left: 10vw;
+    display: flex;
+    gap: 0.5vw;
+    flex-direction: column;
+    height: 50%;
+  }
+  #page2 #content p {
+    font-size: 5vw;
+    font-family: monospace;
+    font-weight: 300;
+  }
+  #page2 .container {
+    /* height: 21px; */
+    height: 2vw;
+    width: 70%;
+    background-color: rgba(65, 44, 65, 0.829);
+  }
+
+  #page3 {
+    height: fit-content;
+    /* background-color: antiquewhite; */
+    width: 100%;
+  }
+  #page3 h1 {
+    color: rgb(131, 131, 173);
+    font-size: 8vw;
+  }
+
+  #list {
+    padding-top: 5vw;
+    height: 60%;
+    width: 80%;
+    /* background-color: black; */
+  }
+  #list ul {
+    gap: 2vw;
+    font-size: 5vw;
+
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  }
+  #list ul li {
+    font-weight: 100;
+    /* background-color: aqua; */
+  }
+  #page4 {
+    height: 100%;
+    /* background-color: antiquewhite; */
+    width: 100%;
+  }
+  #page4 h1 {
+    font-size: 8vw;
+  }
+  #page4 #about-content {
+    height: 70%;
+    width: 80%;
+  
+    margin-left: 7vw;
+    font-size: 3vw;
+  }
+  #page5 {
+    height: 10%;
+
+    /* background-color: rgb(123, 193, 255); */
+  }
+  #page5 #contact {
+    height: 80%;
+    width: 100%;
+    border-top: 1px solid rgb(233, 230, 230);
+    text-align: center;
+    padding: 4vw;
+    /* background-color: aqua; */
+  }
+
+  #page5 #contact h1 {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 4vw;
+    color: rgb(55, 55, 165);
+  }
+  #page5 #contact h4 {
+    margin-top: 2vw;
+    font-size: 2vw;
+  }
+  #page5 #contact p {
+    margin-top: 1vw;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2vw;
+  }
+}
